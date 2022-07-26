@@ -12,21 +12,22 @@ namespace DataAccess.Repositories
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public async Task<Book> GetByIdAsync(int id)
+        public async Task<Book> GetByIsbnAsync(long isbn13)
         {
-            var product = await _dbContext.Book.SingleOrDefaultAsync(b => b.Id == id);
-            return product;
+            var book = await _dbContext.Book.SingleOrDefaultAsync(b => b.Isbn13 == isbn13);
+            return book;
         }
 
         public async Task<List<Book>> GetListAsync()
         {
-            var products = await _dbContext.Book.ToListAsync();
-            return products;
+            var books = await _dbContext.Book.ToListAsync();
+            return books;
         }
 
-        public async Task<bool> AddAsync(Book product)
+        public async Task<bool> AddAsync(Book book)
         {
-            await _dbContext.Book.AddAsync(product);
+            book.CreatedDateTime = DateTime.UtcNow;
+            await _dbContext.Book.AddAsync(book);
             var result = await _dbContext.SaveChangesAsync();
             return result > 0;
         }

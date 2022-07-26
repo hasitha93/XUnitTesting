@@ -4,8 +4,8 @@ namespace DataAccess.Repositories
 {
     public interface IBookRepository
     {
-        Task<bool> AddAsync(Book product);
-        Task<Book> GetByIdAsync(int id);
+        Task<bool> AddAsync(Book book);
+        Task<Book> GetByIsbnAsync(long isbn13);
         Task<List<Book>> GetListAsync();
     }
 }
