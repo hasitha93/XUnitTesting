@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCollection.API", "BookC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{200E3B40-5604-4318-83AB-B7A920665FC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCollection.UnitTests", "BookCollection.UnitTests\BookCollection.UnitTests.csproj", "{C90D8D54-655B-4817-B247-B5EB242AFAC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{200E3B40-5604-4318-83AB-B7A920665FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{200E3B40-5604-4318-83AB-B7A920665FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{200E3B40-5604-4318-83AB-B7A920665FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C90D8D54-655B-4817-B247-B5EB242AFAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C90D8D54-655B-4817-B247-B5EB242AFAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C90D8D54-655B-4817-B247-B5EB242AFAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C90D8D54-655B-4817-B247-B5EB242AFAC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
