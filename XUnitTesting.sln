@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCollection.API", "BookCollection.API\BookCollection.API.csproj", "{A41B7C60-7251-48C6-BBCC-DE9821897ED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{200E3B40-5604-4318-83AB-B7A920665FC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCollection.DataAccess", "DataAccess\BookCollection.DataAccess.csproj", "{200E3B40-5604-4318-83AB-B7A920665FC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCollection.UnitTests", "BookCollection.UnitTests\BookCollection.UnitTests.csproj", "{C90D8D54-655B-4817-B247-B5EB242AFAC3}"
 EndProject

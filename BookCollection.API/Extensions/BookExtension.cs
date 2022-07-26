@@ -1,5 +1,5 @@
 ﻿using BookCollection.API.Models;
-using DataAccess.Entities;
+using BookCollection.DataAccess.Entities;
 
 namespace BookCollection.API.Extensions
 {

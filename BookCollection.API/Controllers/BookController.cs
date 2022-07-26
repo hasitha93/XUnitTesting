@@ -1,6 +1,6 @@
 ﻿using BookCollection.API.Extensions;
 using BookCollection.API.Models;
-using DataAccess.Repositories;
+using BookCollection.DataAccess.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookCollection.API.Controllers
