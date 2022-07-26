@@ -1,6 +1,6 @@
-﻿using DataAccess.Entities;
+﻿using BookCollection.DataAccess.Entities;
 
-namespace DataAccess.Repositories
+namespace BookCollection.DataAccess.Repositories
 {
     public interface IBookRepository
     {

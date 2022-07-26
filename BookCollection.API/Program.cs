@@ -1,5 +1,5 @@
-using DataAccess;
-using DataAccess.Repositories;
+using BookCollection.DataAccess;
+using BookCollection.DataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

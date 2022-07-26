@@ -1,7 +1,7 @@
-﻿using DataAccess.Entities;
+﻿using BookCollection.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccess
+namespace BookCollection.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DataAccess.Entities
+namespace BookCollection.DataAccess.Entities
 {
     public sealed class Book
     {

@@ -1,7 +1,7 @@
-﻿using DataAccess.Entities;
+﻿using BookCollection.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccess.Repositories
+namespace BookCollection.DataAccess.Repositories
 {
     public sealed class BookRepository : IBookRepository
     {
