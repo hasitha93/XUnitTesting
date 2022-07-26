@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCollection.API", "BookCollection.API\BookCollection.API.csproj", "{A41B7C60-7251-48C6-BBCC-DE9821897ED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{200E3B40-5604-4318-83AB-B7A920665FC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A41B7C60-7251-48C6-BBCC-DE9821897ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41B7C60-7251-48C6-BBCC-DE9821897ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41B7C60-7251-48C6-BBCC-DE9821897ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41B7C60-7251-48C6-BBCC-DE9821897ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{200E3B40-5604-4318-83AB-B7A920665FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{200E3B40-5604-4318-83AB-B7A920665FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{200E3B40-5604-4318-83AB-B7A920665FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{200E3B40-5604-4318-83AB-B7A920665FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C55457B-242C-4D0E-B07F-42A6A1DFCC05}
+	EndGlobalSection
+EndGlobal
