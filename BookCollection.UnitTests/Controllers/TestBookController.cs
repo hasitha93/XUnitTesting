@@ -43,5 +43,35 @@ namespace BookCollection.UnitTests.Controllers
             //Assert
             result.Should().BeOfType<NoContentResult>();
         }
+
+        [Fact]
+        public async Task GetBookByIdAsync_ExistingIdPassed_ShouldReturnOKRequest()
+        {
+            /// Arrange
+            long isbn13 = 1234567890111;
+            _mockRepo.Setup(_ => _.GetByIsbnAsync(It.IsAny<long>())).
+                ReturnsAsync((long i) => BookMockData.GetBookList().SingleOrDefault(p => p.Isbn13 == i));
+
+            /// Act
+            var result = await _controller.GetBookByIdAsync(isbn13);
+
+            /// Assert
+            result.Should().BeOfType<OkObjectResult>();
+        }
+
+        [Fact]
+        public async Task GetBookByIdAsync_NotExistingIdPassed_ShouldReturnBadRequest()
+        {
+            /// Arrange
+            long isbn13 = 1234567890555;
+            _mockRepo.Setup(_ => _.GetByIsbnAsync(It.IsAny<long>())).
+                ReturnsAsync((long i) => BookMockData.GetBookList().SingleOrDefault(p => p.Isbn13 == i));
+
+            /// Act
+            var result = await _controller.GetBookByIdAsync(isbn13);
+
+            /// Assert
+            result.Should().BeOfType<BadRequestResult>();
+        }
     }
 }
