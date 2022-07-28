@@ -1,4 +1,5 @@
 ﻿using BookCollection.API.Controllers;
+using BookCollection.DataAccess.Entities;
 using BookCollection.DataAccess.Repositories;
 using BookCollection.UnitTests.MockData;
 using FluentAssertions;
@@ -72,6 +73,19 @@ namespace BookCollection.UnitTests.Controllers
 
             /// Assert
             result.Should().BeOfType<BadRequestResult>();
+        }
+
+        [Fact]
+        public async Task AddBookAsync_ShouldCall_AddAsync_ExactlyOnce()
+        {
+            /// Arrange
+            var newBook = BookMockData.NewBookModel();
+
+            /// Act
+            var result = await _controller.AddBookAsync(newBook);
+
+            /// Assert
+            _mockRepo.Verify(_ => _.AddAsync(It.IsAny<Book>()), Times.Once);
         }
     }
 }
