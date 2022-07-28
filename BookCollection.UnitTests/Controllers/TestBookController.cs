@@ -1,4 +1,5 @@
 ﻿using BookCollection.API.Controllers;
+using BookCollection.DataAccess.Entities;
 using BookCollection.DataAccess.Repositories;
 using BookCollection.UnitTests.MockData;
 using FluentAssertions;
@@ -59,11 +60,13 @@ namespace BookCollection.UnitTests.Controllers
             result.Should().BeOfType<OkObjectResult>();
         }
 
-        [Fact]
-        public async Task GetBookByIdAsync_NotExistingIdPassed_ShouldReturnBadRequest()
+        [Theory]
+        [InlineData(1234567890555)]
+        [InlineData(0)]
+        [InlineData(-1234567890555)]
+        public async Task GetBookByIdAsync_NotExistingIdPassed_ShouldReturnBadRequest(long isbn13)
         {
             /// Arrange
-            long isbn13 = 1234567890555;
             _mockRepo.Setup(_ => _.GetByIsbnAsync(It.IsAny<long>())).
                 ReturnsAsync((long i) => BookMockData.GetBookList().SingleOrDefault(p => p.Isbn13 == i));
 
@@ -72,6 +75,19 @@ namespace BookCollection.UnitTests.Controllers
 
             /// Assert
             result.Should().BeOfType<BadRequestResult>();
+        }
+
+        [Fact]
+        public async Task AddBookAsync_ShouldCall_AddAsync_ExactlyOnce()
+        {
+            /// Arrange
+            var newBook = BookMockData.NewBookModel();
+
+            /// Act
+            var result = await _controller.AddBookAsync(newBook);
+
+            /// Assert
+            _mockRepo.Verify(_ => _.AddAsync(It.IsAny<Book>()), Times.Once);
         }
     }
 }
