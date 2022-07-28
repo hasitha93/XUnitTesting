@@ -60,11 +60,13 @@ namespace BookCollection.UnitTests.Controllers
             result.Should().BeOfType<OkObjectResult>();
         }
 
-        [Fact]
-        public async Task GetBookByIdAsync_NotExistingIdPassed_ShouldReturnBadRequest()
+        [Theory]
+        [InlineData(1234567890555)]
+        [InlineData(0)]
+        [InlineData(-1234567890555)]
+        public async Task GetBookByIdAsync_NotExistingIdPassed_ShouldReturnBadRequest(long isbn13)
         {
             /// Arrange
-            long isbn13 = 1234567890555;
             _mockRepo.Setup(_ => _.GetByIsbnAsync(It.IsAny<long>())).
                 ReturnsAsync((long i) => BookMockData.GetBookList().SingleOrDefault(p => p.Isbn13 == i));
 
